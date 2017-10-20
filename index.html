@@ -5,7 +5,7 @@
 
 <body>
   <section class="outputScreen">
-    <h2>C</h2><h1>0</h1>
+    <h2 id="buttonC">C</h2><input id="inputField" type="text" placeholder="0" name="calc">
   </section>
   <section class="buttons">
     <div>
@@ -16,7 +16,123 @@
     </div>
   </section>
 
-  <scipt>
-  </scipt>
+  <script>
+      let one = document.getElementById("button1");
+      let two = document.getElementById("button2");
+      let three = document.getElementById("button3");
+      let four = document.getElementById("button4");
+      let five = document.getElementById("button5");
+      let six = document.getElementById("button6");
+      let seven = document.getElementById("button7");
+      let eight = document.getElementById("button8");
+      let nine = document.getElementById("button9");
+      let zero = document.getElementById("button0");
+      let plus = document.getElementById("buttonPlus");
+      let minus = document.getElementById("buttonMinus");
+      let divide = document.getElementById("buttonDivide");
+      let dot = document.getElementById("buttonDot");
+      let equal = document.getElementById("buttonEqual");
+      let multiply = document.getElementById("buttonMultiply");
+      let c = document.getElementById("buttonC");
+      
+      
+      /*
+      one.addEventListener('click', oneFunction);
+      two.addEventListener('click', twoFunction);
+      three.addEventListener('click', threeFunction);
+      four.addEventListener('click', fourFunction);
+      five.addEventListener('click', fiveFunction);
+      six.addEventListener('click', sixFunction);
+    seven.addEventListener('click', sevenFunction);
+      eight.addEventListener('click', eightFunction);
+      nine.addEventListener('click', nineFunction);
+      zero.addEventListener('click', zeroFunction);
+      plus.addEventListener('click', plusFunction);
+      minus.addEventListener('click', minusFunction);
+      divide.addEventListener('click', divideFunction);
+      dot.addEventListener('click', dotFunction);
+      equal.addEventListener('click', equalFunction);
+      multiply.addEventListener('click', multiplyFunction);
+      */
+      
+      equal.addEventListener('click', enterFun);
+      c.addEventListener('click', cFun);
+      
+      window.addEventListener('keydown', fingerDown)
+      function fingerDown(evt) {
+          console.log(evt.key)
+          
+          switch (evt.key) {
+                /*case "1":
+                  break;
+                  
+                case "2":
+                  break;
+                  
+                case "3":
+                  break;
+                  
+                case "4":
+                  break;
+                  
+                case "5":
+                  break;
+                  
+              case "6":
+                  break;
+                  
+              case "7":
+                  break;
+                  
+              case "8":
+                  break;
+                  
+              case "9":
+                  break;
+                  
+              case "0":
+                  break;
+                 
+              case "+":
+                  break;
+                  
+              case "-":
+                  break;
+                  
+              case "/":
+                  break;
+                  
+              case "*":
+                  break;
+              
+              case ".":
+                  break;*/
+                
+              case "enter":
+                  enterFun()
+                  break;
+                
+              case "c":
+                  cFun()
+                  break;               
+                  
+                  
+          }
+      }
+      
+      function enterFun() {
+          let userInput = document.getElementById("inputField").value
+          console.log(userInput)
+      }
+      
+      function cFun(){
+          
+      }
+      
+      
+      
+      
+      
+  </script>
 
 </body>
