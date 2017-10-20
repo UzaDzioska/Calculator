@@ -36,7 +36,7 @@
       let c = document.getElementById("buttonC");
 
 
-      
+
       one.addEventListener('click', oneFunction);
       two.addEventListener('click', twoFunction);
       three.addEventListener('click', threeFunction);
@@ -52,9 +52,9 @@
       divide.addEventListener('click', divideFunction);
       dot.addEventListener('click', dotFunction);
       multiply.addEventListener('click', multiplyFunction);
-      
-      
-      
+
+
+
 
       equal.addEventListener('click', enterFun);
       c.addEventListener('click', cFun);
@@ -120,47 +120,47 @@
 
           }
       }
-      
+
       function oneFunction() {
           document.getElementById("inputField").value += 1
       }
-      
+
       function twoFunction() {
           document.getElementById("inputField").value += 2
       }
-      
+
       function threeFunction() {
           document.getElementById("inputField").value += 3
       }
-      
+
       function fourFunction() {
           document.getElementById("inputField").value += 4
       }
-      
+
       function fiveFunction() {
           document.getElementById("inputField").value += 5
       }
-      
+
       function sixFunction() {
           document.getElementById("inputField").value += 6
       }
-      
+
       function sevenFunction() {
           document.getElementById("inputField").value += 7
       }
-      
+
       function eightFunction() {
           document.getElementById("inputField").value += 8
       }
-      
+
       function nineFunction() {
           document.getElementById("inputField").value += 9
       }
-      
+
       function zeroFunction() {
           document.getElementById("inputField").value += 0
       }
-      
+
       function plusFunction() {
           document.getElementById("inputField").value += "+"
       }
@@ -170,7 +170,7 @@
       function divideFunction() {
           document.getElementById("inputField").value += "/"
       }
-      
+
       function dotFunction() {
           document.getElementById("inputField").value += "."
       }
@@ -190,6 +190,17 @@
       function cFun(){
          document.getElementById("inputField").value = ""
       }
+
+      document.getElementById("inputField").addEventListener("keypress", function (e) {
+          let allowedChars = '0123456789.=-*+/';
+          function contains(stringValue, charValue) {
+              return stringValue.indexOf(charValue) > -1
+            }
+          let invalidKey = e.key.length === 1 && !contains(allowedChars, e.key)
+                  || e.key === '.' && contains(e.target.value, '.')
+          invalidKey && e.preventDefault()
+      });
+
 
 
 
