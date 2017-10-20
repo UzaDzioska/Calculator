@@ -36,7 +36,7 @@
       let c = document.getElementById("buttonC");
 
 
-      /*
+      
       one.addEventListener('click', oneFunction);
       two.addEventListener('click', twoFunction);
       three.addEventListener('click', threeFunction);
@@ -51,9 +51,10 @@
       minus.addEventListener('click', minusFunction);
       divide.addEventListener('click', divideFunction);
       dot.addEventListener('click', dotFunction);
-      equal.addEventListener('click', equalFunction);
       multiply.addEventListener('click', multiplyFunction);
-      */
+      
+      
+      
 
       equal.addEventListener('click', enterFun);
       c.addEventListener('click', cFun);
@@ -119,6 +120,66 @@
 
           }
       }
+      
+      function oneFunction() {
+          document.getElementById("inputField").value += 1
+      }
+      
+      function twoFunction() {
+          document.getElementById("inputField").value += 2
+      }
+      
+      function threeFunction() {
+          document.getElementById("inputField").value += 3
+      }
+      
+      function fourFunction() {
+          document.getElementById("inputField").value += 4
+      }
+      
+      function fiveFunction() {
+          document.getElementById("inputField").value += 5
+      }
+      
+      function sixFunction() {
+          document.getElementById("inputField").value += 6
+      }
+      
+      function sevenFunction() {
+          document.getElementById("inputField").value += 7
+      }
+      
+      function eightFunction() {
+          document.getElementById("inputField").value += 8
+      }
+      
+      function nineFunction() {
+          document.getElementById("inputField").value += 9
+      }
+      
+      function zeroFunction() {
+          document.getElementById("inputField").value += 0
+      }
+      
+      function plusFunction() {
+          document.getElementById("inputField").value += "+"
+      }
+      function minusFunction() {
+          document.getElementById("inputField").value += "-"
+      }
+      function divideFunction() {
+          document.getElementById("inputField").value += "/"
+      }
+      
+      function dotFunction() {
+          document.getElementById("inputField").value += "."
+      }
+
+      function multiplyFunction() {
+          document.getElementById("inputField").value += "*"
+      }
+
+
 
       function enterFun() {
           let userInput = eval(document.getElementById("inputField").value)
