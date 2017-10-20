@@ -121,12 +121,13 @@
       }
 
       function enterFun() {
-          let userInput = document.getElementById("inputField").value
+          let userInput = eval(document.getElementById("inputField").value)
           console.log(userInput)
+          document.getElementById("inputField").value = userInput
       }
 
       function cFun(){
-
+         document.getElementById("inputField").value = ""
       }
 
 
